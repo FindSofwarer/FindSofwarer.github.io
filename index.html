@@ -12,8 +12,8 @@
       height: 100%;
       margin: 0;
       font-family: 'JetBrains Mono', monospace;
-      background: #181a20;
-      color: #f8f9fa;
+      background: #f8f9fa;
+      color: #212529;
       scroll-behavior: smooth;
     }
     .parallax-bg {
@@ -22,7 +22,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: linear-gradient(120deg, #23272b 55%, #6c63ff 120%);
+      background: linear-gradient(120deg, #e9ecef 60%, #ffffff 100%);
       z-index: -2;
       overflow: hidden;
     }
@@ -32,33 +32,33 @@
       height: 130vh;
       left: -15vw;
       top: -20vh;
-      opacity: 0.20;
-      background: radial-gradient(circle, #ffde59 0%, #23272b 80%);
+      opacity: 0.13;
+      background: radial-gradient(circle, #6c63ff 0%, #e9ecef 80%);
       animation: moveParallax 14s linear infinite alternate;
       z-index: -1;
     }
     @keyframes moveParallax {
       0% { transform: translateY(0px) scale(1); }
-      100% { transform: translateY(-120px) scale(1.06); }
+      100% { transform: translateY(-120px) scale(1.05); }
     }
     .navbar {
-      background: rgba(24,26,32,0.95) !important;
-      box-shadow: 0 2px 16px rgba(31,28,44,0.18);
-      border-bottom: 1px solid #23272b;
+      background: rgba(255,255,255,0.97) !important;
+      box-shadow: 0 2px 16px rgba(31,28,44,0.08);
+      border-bottom: 1px solid #e9ecef;
     }
     .navbar-brand {
       font-weight: bold;
       letter-spacing: 2px;
       font-size: 1.5rem;
-      color: #ffde59 !important;
-      text-shadow: 0 2px 8px #181a20;
+      color: #6c63ff !important;
+      text-shadow: 0 2px 8px #fff;
       transition: color 0.2s;
     }
     .navbar-brand:hover {
-      color: #6c63ff !important;
+      color: #ffde59 !important;
     }
     .nav-link {
-      color: #f8f9fa !important;
+      color: #212529 !important;
       font-weight: 500;
       font-size: 1.1em;
       letter-spacing: 1px;
@@ -66,7 +66,7 @@
       transition: color 0.2s;
     }
     .nav-link:hover {
-      color: #ffde59 !important;
+      color: #6c63ff !important;
     }
     .hero-section {
       min-height: 80vh;
@@ -79,37 +79,38 @@
       z-index: 1;
     }
     .hero-title {
-      font-size: 3.3rem;
+      font-size: 3rem;
       font-weight: bold;
-      color: #ffde59;
+      color: #6c63ff;
       letter-spacing: 2px;
       margin-bottom: 0.5em;
       animation: fadeInDown 1.4s cubic-bezier(.68,-0.55,.27,1.55) both;
     }
     .hero-sub {
       font-size: 1.25rem;
-      opacity: 0.90;
+      opacity: 0.95;
       margin-bottom: 2em;
       animation: fadeIn 2s .8s both;
+      color: #212529;
     }
     .hero-cta {
       font-size: 1.2em;
       font-weight: 700;
-      background: linear-gradient(90deg, #ffde59 60%, #6c63ff 100%);
-      color: #181a20;
+      background: linear-gradient(90deg, #6c63ff 60%, #ffde59 100%);
+      color: #fff;
       padding: 0.7em 2.2em;
       border-radius: 2em;
       border: none;
-      box-shadow: 0 6px 24px #181a2033;
+      box-shadow: 0 6px 24px #21252933;
       margin-top: 1em;
       transition: background 0.2s, color 0.2s, box-shadow 0.2s;
       cursor: pointer;
       animation: fadeInUp 1.8s 1.1s both;
     }
     .hero-cta:hover {
-      background: linear-gradient(90deg, #6c63ff 60%, #ffde59 100%);
-      color: #fff;
-      box-shadow: 0 12px 32px #6c63ff33;
+      background: linear-gradient(90deg, #ffde59 60%, #6c63ff 100%);
+      color: #212529;
+      box-shadow: 0 12px 32px #ffde5933;
     }
     @keyframes fadeInDown {
       0% { opacity: 0; transform: translateY(-60px);}
@@ -124,7 +125,7 @@
       100% { opacity: 1;}
     }
     .section-title {
-      color: #ffde59;
+      color: #6c63ff;
       text-align: center;
       font-size: 1.7rem;
       font-weight: 700;
@@ -133,9 +134,9 @@
       animation: fadeInDown 1.2s;
     }
     .card {
-      background: #23272b;
+      background: #fff;
       border: none;
-      box-shadow: 0 4px 24px rgba(31,28,44,0.17);
+      box-shadow: 0 4px 24px rgba(31,28,44,0.07);
       border-radius: 18px;
       margin-bottom: 2rem;
       transition: transform 0.2s, box-shadow 0.2s;
@@ -143,7 +144,7 @@
       animation: fadeInUp 1s forwards;
     }
     .card-title {
-      color: #ffde59;
+      color: #6c63ff;
       font-size: 1.15em;
       font-weight: 600;
       margin-bottom: 0.2em;
@@ -158,14 +159,14 @@
     }
     .card .bi {
       font-size: 2.2em;
-      color: #6c63ff;
+      color: #ffde59;
       margin-right: 0.5em;
       vertical-align: middle;
-      filter: drop-shadow(0 2px 8px #6c63ff22);
+      filter: drop-shadow(0 2px 8px #ffde5922);
     }
     .tech-list .badge {
-      background: #343a40;
-      color: #ffde59;
+      background: #e9ecef;
+      color: #6c63ff;
       margin: 0.15em 0.25em;
       font-size: 0.98em;
       border-radius: 1.2em;
@@ -181,16 +182,16 @@
       animation-delay: 0.4s;
     }
     .contact-section {
-      background: #23272b;
+      background: #fff;
       padding: 2.5em 1em;
       border-radius: 18px;
       margin-top: 2.5em;
       text-align: center;
-      box-shadow: 0 4px 24px rgba(31,28,44,0.17);
+      box-shadow: 0 4px 24px rgba(31,28,44,0.10);
       animation: fadeIn 2s;
     }
     .contact-section h2 {
-      color: #ffde59;
+      color: #6c63ff;
       font-size: 1.3em;
       margin-bottom: 1em;
       font-weight: 700;
@@ -216,13 +217,12 @@
     .footer {
       text-align: center;
       padding: 2em 1em 1em 1em;
-      color: #aaa;
+      color: #888;
       font-size: 1em;
       opacity: 0.7;
       background: none;
       border: none;
     }
-    /* Parallax responsive */
     @media (max-width: 600px) {
       .hero-title { font-size: 2.1rem; }
       .section-title { font-size: 1.15rem; }
@@ -233,7 +233,7 @@
 <body>
   <div class="parallax-bg"></div>
   <div class="parallax-layer"></div>
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">Barış</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -274,7 +274,7 @@
             <p class="card-text">
               <b>Knight</b> is a modern game development library, designed for flexibility and performance. Built with a passion for open source and innovative gaming experiences.
             </p>
-            <a href="https://github.com/FindSofwarer/knight" target="_blank" class="btn btn-outline-warning">
+            <a href="https://github.com/FindSofwarer/knight" target="_blank" class="btn btn-outline-primary">
               <i class="bi bi-github"></i> View on GitHub
             </a>
           </div>
