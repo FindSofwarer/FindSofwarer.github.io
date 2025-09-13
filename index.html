@@ -46,15 +46,21 @@
       -webkit-text-fill-color: transparent;
       text-shadow: 0 1px 8px #007aff22;
     }
+    .navbar-nav {
+      flex-grow: 1;
+    }
     .navbar .nav-link {
       color: #222 !important;
       font-weight: 500;
       font-size: 1.13em;
-      margin: 0 0.7em;
-      padding: 0.45em 1.2em;
+      margin: 0 0.5em;
+      padding: 0.45em 1em;
       border-radius: 14px;
       transition: background .16s, color .18s, box-shadow .22s;
       position: relative;
+      display: flex;
+      align-items: center;
+      gap: .15em;
     }
     .navbar .nav-link:hover {
       background: linear-gradient(90deg,#e3f0ff 0%,#f3fbff 100%);
@@ -63,19 +69,34 @@
       font-weight: 700;
       letter-spacing: 1px;
     }
-    .lang-switch {
+    .navbar .lang-switch {
       background: linear-gradient(90deg,#f5f7fa 60%,#e3f0ff 100%);
       color: #007aff !important;
       border-radius: 14px;
       border: 1px solid #eaeaea;
       padding: 0.4em 1.2em;
       font-weight: 700;
-      margin-left: .7em;
+      margin-left: 1em;
       cursor: pointer;
       transition: background .15s, color .15s;
       box-shadow: 0 2px 8px #e3f0ff66;
+      font-size: 1em;
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
-    .lang-switch:hover {
+    @media (max-width: 991px) {
+      .navbar .lang-switch {
+        position: static;
+        transform: none;
+        margin-left: 0.5em;
+        margin-top: .5em;
+        margin-bottom: .5em;
+      }
+    }
+    .navbar .lang-switch:hover {
       background: linear-gradient(90deg,#007aff 60%,#005ecb 100%);
       color: #fff !important;
       border: 1px solid #eaeaea;
@@ -145,7 +166,7 @@
       font-weight: 800;
       color: #222;
       text-align: center;
-      margin-bottom: 1.7em;
+      margin-bottom: 0.9em; /* Eskiden 1.7em idi, panel ile daha yakın */
       letter-spacing: 1.5px;
       animation: fadeInDown 1s;
       background: linear-gradient(90deg, #007aff 60%, #222 100%);
@@ -240,7 +261,7 @@
       flex-wrap: wrap;
       gap: 1.7em;
       justify-content: center;
-      margin-top: 1.2em;
+      margin-top: 0.6em; /* Eskiden 1.2em idi, başlık daha yakın */
     }
     .feature-card {
       background: rgba(245,247,250,0.82);
@@ -309,7 +330,7 @@
       font-size: 1.23em;
       font-weight: 800;
       color: #007aff;
-      margin-bottom: 1em;
+      margin-bottom: 0.7em; /* Eskiden 1em idi, panele daha yakın */
       letter-spacing: 1.5px;
       background: linear-gradient(90deg,#007aff 40%,#222 100%);
       -webkit-background-clip: text;
@@ -338,7 +359,7 @@
     }
     /* LinkedIn Badge Responsive + Glassmorphism */
     .linkedin-badge-wrapper {
-      margin: 2.6em auto 0 auto;
+      margin: 2em auto 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -347,7 +368,7 @@
       box-shadow: 0 2px 24px #e3f0ff55;
       border-radius: 18px;
       backdrop-filter: blur(14px);
-      padding: 1.6em 0.7em;
+      padding: 1.2em 0.7em;
       max-width: 350px;
     }
     .badge-base.LI-profile-badge {
@@ -375,6 +396,16 @@
       .container { max-width: 98vw; }
       .feature-card, .project-card { max-width: 95vw; }
     }
+    @media (max-width: 991px) {
+      .navbar .lang-switch {
+        position: static;
+        transform: none;
+        margin-left: 0.5em;
+        margin-top: .5em;
+        margin-bottom: .5em;
+      }
+      .navbar .navbar-brand { font-size: 1.5em; }
+    }
     @media (max-width: 900px) {
       .hero-title { font-size: 2.1rem; }
       .section-title { font-size: 1.3rem; }
@@ -391,12 +422,14 @@
       .hero-section { min-height: 35vh; padding-top: 1.5em;}
       .project-card, .feature-card, .contact-section { padding: 1.2em 0.5em; }
       .footer { font-size: 0.9em; border-radius: 0 0 14px 14px; }
+      .navbar-nav { flex-direction: column; }
+      .navbar .nav-link { margin: 0.3em 0; }
     }
   </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg mb-0">
-    <div class="container">
+    <div class="container position-relative">
       <a class="navbar-brand" href="#">Barış</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" style="color:#007aff"></span>
@@ -408,10 +441,8 @@
           <li class="nav-item"><a class="nav-link" href="#skills" id="navSkills"><i class="fa fa-code"></i> Yetenekler</a></li>
           <li class="nav-item"><a class="nav-link" href="#about" id="navAbout"><i class="fa fa-user"></i> Hakkımda</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact" id="navContact"><i class="fa fa-envelope"></i> İletişim</a></li>
-          <li class="nav-item">
-            <button class="lang-switch" id="langSwitch">English</button>
-          </li>
         </ul>
+        <button class="lang-switch" id="langSwitch">English</button>
       </div>
     </div>
   </nav>
